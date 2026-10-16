@@ -1,0 +1,294 @@
+/* Zuvvix Studio - Blog Login Page Styling */
+
+.bl-root {
+  min-height: 100vh;
+  background-color: #f8fafc;
+  background-image: radial-gradient(circle at 50% 0%, #eff6ff 0%, #f8fafc 70%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 32px 20px;
+  font-family: var(--font-sans, "Geist", "Inter", sans-serif);
+  color: var(--color-navy, #101828);
+  position: relative;
+}
+
+.bl-card {
+  width: 100%;
+  max-width: 440px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  padding: 36px 32px 32px;
+  box-shadow: 0 20px 48px rgba(16, 24, 40, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04);
+  animation: blScaleIn 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes blScaleIn {
+  from {
+    transform: scale(0.97) translateY(8px);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}
+
+.bl-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 26px;
+}
+
+.bl-logo-wrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.bl-logo {
+  height: 30px;
+  width: auto;
+  object-fit: contain;
+}
+
+.bl-badge {
+  font-family: var(--font-mono, monospace);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #2563eb;
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  padding: 3px 9px;
+  border-radius: 9999px;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.bl-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #0f172a;
+  letter-spacing: -0.02em;
+  margin: 0 0 6px;
+  line-height: 1.25;
+}
+
+.bl-subtitle {
+  font-size: 14px;
+  color: #64748b;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.bl-error-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #b91c1c;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 13.5px;
+  font-weight: 500;
+  margin-bottom: 18px;
+  animation: blShake 0.3s ease-in-out;
+}
+
+@keyframes blShake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-4px); }
+  40%, 80% { transform: translateX(4px); }
+}
+
+.bl-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.bl-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.bl-label {
+  font-size: 13.5px;
+  font-weight: 500;
+  color: #334155;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bl-input-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.bl-input-icon {
+  position: absolute;
+  left: 14px;
+  color: #94a3b8;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+}
+
+.bl-input {
+  width: 100%;
+  height: 44px;
+  padding: 0 14px 0 42px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #0f172a;
+  font-size: 14.5px;
+  font-family: inherit;
+  transition: all 0.15s ease;
+  outline: none;
+}
+
+.bl-input::placeholder {
+  color: #94a3b8;
+}
+
+.bl-input:focus {
+  border-color: var(--color-blue, #2d5bff);
+  box-shadow: 0 0 0 3px rgba(45, 91, 255, 0.15);
+}
+
+.bl-password-toggle {
+  position: absolute;
+  right: 12px;
+  background: transparent;
+  border: none;
+  color: #94a3b8;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  transition: color 0.15s ease;
+}
+
+.bl-password-toggle:hover {
+  color: #334155;
+}
+
+.bl-submit-btn {
+  height: 44px;
+  width: 100%;
+  background: var(--color-blue, #2d5bff);
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 14.5px;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+  margin-top: 4px;
+}
+
+.bl-submit-btn:hover {
+  background: var(--color-blue-ink, #1f45d6);
+  box-shadow: 0 4px 14px rgba(45, 91, 255, 0.25);
+  transform: translateY(-1px);
+}
+
+.bl-submit-btn:active {
+  transform: translateY(0);
+}
+
+.bl-submit-btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Spinner */
+.bl-spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  border-top-color: #ffffff;
+  border-radius: 50%;
+  animation: blSpin 0.7s linear infinite;
+}
+
+@keyframes blSpin {
+  to { transform: rotate(360deg); }
+}
+
+/* Demo Credentials Box */
+.bl-demo-hint {
+  margin-top: 22px;
+  padding: 12px 14px;
+  background: #f8fafc;
+  border: 1px dashed #cbd5e1;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.bl-demo-title {
+  font-size: 12px;
+  font-weight: 600;
+  color: #475569;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.bl-demo-fill-btn {
+  font-size: 11.5px;
+  font-weight: 600;
+  color: #2563eb;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  text-decoration: underline;
+}
+
+.bl-demo-fill-btn:hover {
+  color: #1d4ed8;
+}
+
+.bl-demo-code {
+  font-family: var(--font-mono, monospace);
+  font-size: 12px;
+  color: #0f172a;
+}
+
+/* Back Link */
+.bl-back-link {
+  margin-top: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #64748b;
+  font-size: 13.5px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.bl-back-link:hover {
+  color: #0f172a;
+}
+

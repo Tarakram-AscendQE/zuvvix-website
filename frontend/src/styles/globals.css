@@ -1,0 +1,38 @@
+@import "tailwindcss";
+@import "./base.css";
+
+@import "./pages/assurance-case.css";
+@import "./pages/category.css";
+@import "./pages/continuous-release-assurance.css";
+@import "./pages/design-partnership.css";
+@import "./pages/from-change-to-evidence.css";
+@import "./pages/how-it-works.css";
+@import "./pages/quality-mandate.css";
+@import "./pages/readiness.css";
+@import "./pages/thinking.css";
+@import "./pages/blog-article.css";
+@import "./pages/trust.css";
+
+@theme {
+  --color-navy: #101828;
+  --color-navy-2: #1D2939;
+  --color-blue: #2D5BFF;
+  --color-blue-ink: #1F45D6;
+  --color-slate: #344054;
+  --color-mid: #667085;
+  --color-cool: #98A2B3;
+  --color-line: #D0D5DD;
+  --color-rule: #E4E7EC;
+  --color-mist: #F2F4F7;
+  --color-canvas: #FCFCFD;
+  --color-pale: #EFF4FF;
+  --color-amber: #B54708;
+  --color-amber-bg: #FFF7ED;
+  --color-red: #B42318;
+  --color-red-bg: #FEF3F2;
+  --color-green: #067647;
+  --color-green-bg: #ECFDF3;
+  --font-sans: "Geist", "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "Geist Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+}
+
