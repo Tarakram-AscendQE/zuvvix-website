@@ -52,13 +52,15 @@ app.get('*', (req, res, next) => {
 // Global Error Handler
 app.use(errorHandler)
 
+const port = process.env.PORT || 3000
+
 // Start Server
 async function startServer() {
   await connectDatabase()
 
-  app.listen(config.port, () => {
-    console.log(`🚀 Zuvvix Backend running on http://localhost:${config.port}`)
-    console.log(`📡 API Health: http://localhost:${config.port}/api/health`)
+  app.listen(port, () => {
+    console.log(`🚀 Zuvvix Backend running on port ${port}`)
+    console.log(`📡 API Health: http://localhost:${port}/api/health`)
   })
 }
 
